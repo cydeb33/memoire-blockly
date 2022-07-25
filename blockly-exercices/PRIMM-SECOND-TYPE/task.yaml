@@ -1,0 +1,128 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    En informatique un concept important est le **type** de donnée que vous utilisez.
+
+    Si vous mettez du texte dans une variable, sa valeur est de **type texte**. Exemple ci-dessous.
+
+    .. image:: PRIMM-SECOND-TYPE/text_block.jpg
+
+    Si vous mettez des nombres dans une variable, sa valeur est de **type nombre**. Exemple ci-dessous.
+
+    .. image:: PRIMM-SECOND-TYPE/int_block.jpg
+
+    **Attention qu'une valeur ne peut avoir qu'un seul type de donnée à la fois.**
+
+    Si vous utilisez le bloc vert, ce sera donc considéré comme du texte. Si vous utilisez le bloc bleu, ce sera considéré comme un nombre.
+
+    *Les assurances estiment le prix de la Joconde à 1 milliard d'euros, les dégâts du musée à 1 million d'euros et la thérapie de la pauvre gardienne à 3 000 euros. Ils ont noté tout ça dans la variable* ``montant_assurance``.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 3.3 - introduction au type de donnée
+network_grading: false
+problems:
+    type-guess-3:
+        type: multiple_choice
+        name: ''
+        header: |-
+            À votre avis, dans l'exemple ci-dessous, quelle est la valeur de ``montant_assurance`` ?
+
+            .. image:: PRIMM-SECOND-TYPE/insurance_1.jpg
+        limit: 0
+        choices:
+        -   text: le texte "1 milliard 1 million 3000 euros"
+            feedback: Attention au contenu du bloc vert.
+        -   text: le texte "1 milliard 1 million 3 mille euros"
+            feedback: 'Bien joué ! '
+            valid: true
+        -   text: un message d'erreur
+            feedback: Non ces blocs ne contiennent pas d'erreur.
+        -   text: le nombre "1 001 003 000"
+            feedback: Attention au **type** de bloc utilisé.
+        -   text: le nombre "1 001 003 000 €"
+            feedback: Attention au **type** de bloc utilisé.
+        -   text: Rien, l'ordinateur ne comprend pas comment il doit additionner tout
+                ça.
+            feedback: Attention au **type** de bloc utilisé.
+    type-guess-2:
+        type: multiple_choice
+        name: ''
+        header: |-
+            À votre avis, dans l'exemple ci-dessous, quelle est la valeur de ``montant_assurance`` ?
+
+            .. image:: PRIMM-SECOND-TYPE/insurance_2.jpg
+        limit: 0
+        choices:
+        -   text: un message d'erreur
+            feedback: Non ces blocs ne contiennent pas d'erreur.
+        -   text: le texte "1 001 003 000"
+            feedback: Bien joué !
+            valid: true
+        -   text: le nombre "1 001 003 000"
+            feedback: Attention au **type** de bloc utilisé.
+        -   text: le nombre "1 001 003 000 €"
+            feedback: Attention au **type** de bloc utilisé.
+        -   text: le texte "1 001 003 000 €"
+            feedback: Attention au contenu du bloc.
+        -   text: le texte "1 001 003 000 euros"
+            feedback: Attention au contenu du bloc.
+        -   text: Rien, l'ordinateur ne comprend pas comment il doit additionner tout
+                ça.
+            feedback: Attention au **type** de bloc utilisé.
+    type-guess-number:
+        type: multiple_choice
+        name: ''
+        header: |-
+            À votre avis, dans l'exemple ci-dessous, quelle est la valeur de ``montant_assurance`` ?
+
+            .. image:: PRIMM-SECOND-TYPE/insurance_number.jpg
+        limit: 0
+        choices:
+        -   text: le nombre "1 001 003 000 €"
+            feedback: Attention au "€" présent, ce n'est pas un nombre.
+        -   text: le nombre "1 001 003 000"
+            feedback: Bien joué !
+            valid: true
+        -   text: un message d'erreur
+            feedback: Non ces blocs ne contiennent pas d'erreur.
+        -   text: le texte "1 milliard 1 million 3 mille euros"
+            feedback: Attention au **type** de bloc utilisé.
+        -   text: le texte "1 001 003 000"
+            feedback: Attention au **type** de bloc utilisé.
+    type-guess:
+        type: multiple_choice
+        name: ''
+        header: |-
+            À votre avis, dans l'exemple ci-dessous, quelle est la valeur de ``montant_assurance`` ?
+
+            .. image:: PRIMM-SECOND-TYPE/insurance.jpg
+        limit: 0
+        choices:
+        -   text: 'le texte "1 milliard + 1 million + 3000 euros" '
+            feedback: 'Bien joué ! '
+            valid: true
+        -   text: le nombre "1 001 003 000 €"
+            feedback: Attention au **type** de bloc utilisé.
+        -   text: le nombre "1 001 003 000"
+            feedback: Attention au **type** de bloc utilisé.
+        -   text: Rien, l'ordinateur ne comprend pas comment il doit additionner tout
+                ça.
+            feedback: Attention au **type** de bloc utilisé.
+        -   text: un message d'erreur
+            feedback: Non ces blocs ne contiennent pas d'erreur.
+        -   text: le texte "1 001 003 000"
+            feedback: Attention au contenu du bloc.
+        -   text: le texte "1 001 003 000 euros"
+            feedback: Attention au contenu du bloc.
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

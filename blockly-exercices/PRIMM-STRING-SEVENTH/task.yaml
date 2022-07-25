@@ -1,0 +1,44 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Quand vous ne savez pas comment avancer, en informatique, on essaie de diviser la tâche en plusieurs tâches plus petites.
+
+    Ici, on pourrait donc faire :
+
+    1) Trouvez la première occurrence dans la chaîne de notre sous-chaîne ("effrayant").
+
+    2) Trouvez la dernière occurrence dans la chaîne de notre sous-chaîne ("effrayant").
+
+    3) Récupérez les positions des étapes 1 et 2 en affichant l'information à l'écran.
+
+    4) Remplacez les nombres dans le bloc qui permet d'extraire la sous-chaîne avec les positions trouvées.
+
+    5) Vérifiez si c'est correct.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 2.6.bis - aide résolution exercice
+network_grading: false
+problems:
+    verification:
+        type: multiple_choice
+        name: 'Avez-vous eu besoin de cette aide pour résoudre l''exercice précédent
+            ? '
+        header: ''
+        limit: 0
+        choices:
+        -   text: Oui
+            valid: true
+        -   text: Non
+            valid: true
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

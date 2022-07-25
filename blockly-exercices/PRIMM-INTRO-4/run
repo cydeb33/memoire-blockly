@@ -1,0 +1,24 @@
+#!/bin/python3
+#Open source licence goes here
+
+import os
+import subprocess
+import shlex
+from inginious import feedback
+from inginious import input
+
+
+if __name__ == "__main__":
+    input.parse_template("split-button.py") #Replace sum.py by your filename on this line and the next
+    p = subprocess.Popen(shlex.split("python3 split-button.py"), stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
+    make_output = p.communicate()[0].decode('utf-8')
+    if p.returncode:
+        feedback.set_global_result("failed")
+        feedback.set_global_feedback("Votre code n'a pas pu être exécuté. Vérifiez que tous vos blocs sont correctement connectés.")
+        exit(0)
+    elif make_output == 'BONJOUR TOM, COMMENT ALLEZ-VOUS ?\n':
+        feedback.set_global_result("success")
+        feedback.set_global_feedback("Vous avez écrit : " + make_output)
+    else:
+        feedback.set_global_result("failed")
+        feedback.set_global_feedback("Attention aux énoncés, quel est l'objectif de la tâche 2 ? Vous avez écrit : " + make_output)

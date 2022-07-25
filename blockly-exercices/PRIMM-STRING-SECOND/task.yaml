@@ -1,0 +1,125 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Comme vous pouvez le voir dans l'image ci-dessous, dans une chaîne de caractères chaque caractère a une position. Cette position est représentée par un nombre en commençant à 1. Le "B" est donc en position 1, le "u" en position 6...
+
+    .. container:: text-center
+
+        .. image:: PRIMM-STRING-SECOND/bonjour.jpg
+
+
+    Avec le nouveau bloc ci-dessous, vous pouvez savoir dans le texte fourni, quelle lettre se situe à la position qui nous intéresse.
+
+    .. container:: text-center
+
+        .. image:: PRIMM-STRING-SECOND/2-2.jpg
+
+    Dans l'exemple ci-dessous le bloc bleu contient la valeur 5, la lettre "o" sera donc affichée car elle est à la position 5 dans "Bonjour messieurs, oui...".
+
+
+    .. container:: text-center
+
+        .. image:: PRIMM-STRING-SECOND/5.jpg
+
+    Sachant que le dernier **s** dans **messieurs** est à la **position 17**.
+
+    1) À votre avis qu'est-ce que le code ci-dessous va afficher comme caractère à la **position 18** ?
+
+    .. container:: text-center
+
+        .. image:: PRIMM-STRING-SECOND/18.jpg
+
+    2) À la **position 19**?
+
+    .. container:: text-center
+
+        .. image:: PRIMM-STRING-SECOND/19.jpg
+
+    3) À la **position 20**?
+
+    .. container:: text-center
+
+        .. image:: PRIMM-STRING-SECOND/20.jpg
+
+    4) Une fois que vous avez répondu à toutes les questions, appuyez sur ``Soumettre``.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 2.3 - Les caractères et leur position dans une chaîne
+network_grading: false
+problems:
+    18_pos:
+        type: multiple_choice
+        name: 'À votre avis, qu''est-ce que le code va afficher comme caractère à
+            la position 18 ? '
+        header: ''
+        limit: 0
+        choices:
+        -   text: '"s"'
+            feedback: Relisez bien l'énoncé, le dernier "s" dans "messieurs" est à
+                la position 17.
+        -   text: '"oui"'
+            feedback: Attention, chaque caractère à une et une seule position.
+        -   text: '","'
+            feedback: Bien joué !
+            valid: true
+        -   text: '"d" : la réponse d'
+            feedback: Presque.
+        -   text: Ça ne va pas marcher, ce n'est pas une lettre à la position 18
+            feedback: Tout ce qui est dans une chaîne de caractères, est un caractère.
+        -   text: le nombre 18
+            feedback: Attention au but du bloc, il renvoie un caractère à la position
+                qu'on lui spécifie.
+    19_pos:
+        type: multiple_choice
+        name: 'À votre avis, qu''est-ce que le code va afficher comme caractère à
+            la position 19 ? '
+        header: ''
+        limit: 0
+        choices:
+        -   text: 'un espace " " '
+            feedback: Bien joué !
+            valid: true
+        -   text: '","'
+            feedback: Relisez bien l'énoncé, le dernier "s" dans "messieurs" est à
+                la position 17.
+        -   text: '"o"'
+            feedback: Relisez bien l'énoncé, le dernier "s" dans "messieurs" est à
+                la position 17.
+        -   text: Ça ne va pas marcher, il n'y a rien à la position 19
+            feedback: Tout ce qui est dans une chaîne de caractères, est un caractère.
+        -   text: '"s"'
+            feedback: Relisez bien l'énoncé, le dernier "s" dans "messieurs" est à
+                la position 17.
+        -   text: le nombre 19
+            feedback: Attention au but du bloc, il renvoie un caractère à la position
+                qu'on lui spécifie.
+    20_pos:
+        type: multiple_choice
+        name: 'À votre avis, qu''est-ce que le code va afficher comme caractère à
+            la position 20 ? '
+        header: ''
+        limit: 0
+        choices:
+        -   text: '"o"'
+            feedback: Bien joué !
+            valid: true
+        -   text: '"oui"'
+            feedback: Attention, chaque caractère à une et une seule position. "oui"
+                fait trois caractères.
+        -   text: le nombre 20
+            feedback: Attention au but du bloc, il renvoie un caractère à la position
+                qu'on lui spécifie.
+        -   text: Ça ne va pas marcher, il n'y a rien à la position 20
+            feedback: Tout ce qui est dans une chaîne de caractères, est un caractère.
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

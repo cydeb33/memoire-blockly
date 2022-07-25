@@ -1,0 +1,285 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    *Grâce au témoignage de la gardienne, on suspecte qu'il y avait des animaux durant le vol. Le scientifique a analysé le poil roux et vous a donné une séquence ADN. On a besoin de vous pour extraire un segment de cette chaîne de caractères, qui nous permettra de savoir si le poil roux appartient à un humain ou à un animal.*
+
+    La chaîne d'ADN qui est obtenue durant un séquençage contient de nombreuses paires de bases. Les parties les plus importantes de cette séquence sont celles qui codent pour des protéines. Elles se reconnaissent par la présence d'un codon d'initiation (ATG).
+
+    La séquence qui code pour une protéine se termine par un codon d'arrêt. Les trois codons d'arrêt les plus courants sont TGA, TAA et TAG. Dans cet exercice, nous ne considérons que le codon TAA qui est le plus fréquent.
+
+    1) À l'aide des blocs que vous avez utilisés dans les exercices précédents, extrayez la séquence qui nous intéresse et qui est présente dans la variable ``ADN`` (elle commence par ATG et se termine par TAA) en modifiant le code déjà présent.
+    2) Enregistrez la séquence trouvée dans votre variable ``résultat`` et affichez son contenu à l'écran.
+    3) Une fois fini l'étape 3, appuyez sur ``Soumettre``, attention que pour valider l'exercice, il vous faut **uniquement** afficher la séquence commmençant par le premier ATG présent dans la chaîne de caractères et terminant par le premier TAA présent dans la chaîne de caractères.
+
+
+    Si vous êtes complètement bloqués, allez à la tâche suivante, elle contient un guide pour vous aider à résoudre cet exercice.
+environment_id: math
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 3.6 - Les traces ADN - utilité des variables pour l'extraction de sous-chaînes
+network_grading: false
+problems:
+    substring-variable:
+        type: blockly
+        name: ''
+        header: ''
+        options:
+            maxBlocks: Infinity
+            speed: '60'
+            toolboxPosition: start
+            media: /plugins/blockly/static/blockly/media/
+            css: true
+            grid:
+                spacing: 20
+                length: 3
+                colour: '#ccc'
+                snap: true
+            zoom:
+                controls: true
+                startScale: 1.0
+                maxScale: 3.0
+                minScale: 0.3
+                scaleSpeed: 1.2
+                wheel: false
+            oneBasedIndex: true
+            scrollbars: true
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables>
+                <variable type="">text</variable>
+              </variables>
+                <category name="Variables" colour="330">
+              <variables>
+                <variable type="">text</variable>
+              </variables>
+              <block type="variables_set">
+                <field name="VAR" variabletype="">text</field>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">text</field>
+              </block>
+            </category>
+                <category name="Math" colour="210">
+              <variables></variables>
+              <block type="math_arithmetic">
+                <field name="OP">ADD</field>
+                <value name="A">
+                  <shadow type="math_number">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+                <value name="B">
+                  <shadow type="math_number">
+                    <field name="NUM">1</field>
+                  </shadow>
+                </value>
+              </block>
+            </category>
+                <category name="Texte" colour="180">
+              <variables>
+                <variable type="">text</variable>
+              </variables>
+              <block type="text">
+                <field name="TEXT"></field>
+              </block>
+              <block type="text_indexOf">
+                <field name="END">FIRST</field>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <field name="VAR" variabletype="">text</field>
+                  </block>
+                </value>
+                <value name="FIND">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+              <block type="text_length">
+                <value name="VALUE">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+              <block type="text_changeCase">
+                <field name="CASE">UPPERCASE</field>
+                <value name="TEXT">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+              <block type="text_print">
+                <value name="TEXT">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+              <block type="text_getSubstring">
+                <mutation at1="true" at2="true"></mutation>
+                <field name="WHERE1">FROM_START</field>
+                <field name="WHERE2">FROM_START</field>
+                <value name="STRING">
+                  <block type="variables_get">
+                    <field name="VAR" variabletype="">text</field>
+                  </block>
+                </value>
+              </block>
+              <block type="text_charAt">
+                <mutation at="true"></mutation>
+                <field name="WHERE">FROM_START</field>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <field name="VAR" variabletype="">text</field>
+                  </block>
+                </value>
+              </block>
+            </category>
+                <category name="Logique" colour="210">
+              <variables></variables>
+              <block type="logic_compare">
+                <field name="OP">EQ</field>
+              </block>
+            </category>
+
+
+            </xml>
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables>
+                <variable type="">start</variable>
+                <variable type="">position_fin</variable>
+                <variable type="">stop</variable>
+                <variable type="">ADN</variable>
+                <variable type="">position_debut</variable>
+                <variable type="">text</variable>
+                <variable type="">résultat</variable>
+              </variables>
+              <block type="variables_set" deletable="false" movable="false" editable="false">
+                <field name="VAR" variabletype="">start</field>
+                <value name="VALUE">
+                  <block type="text" deletable="false" movable="false" editable="false">
+                    <field name="TEXT">ATG</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" deletable="false" movable="false" editable="false">
+                    <field name="VAR" variabletype="">stop</field>
+                    <value name="VALUE">
+                      <block type="text">
+                        <field name="TEXT">TAA</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" deletable="false" movable="false" editable="false">
+                        <field name="VAR" variabletype="">ADN</field>
+                        <value name="VALUE">
+                          <block type="text">
+                            <field name="TEXT">TTGAATGCCGTACCAGGTAATGAATGCCGTACCAGGTACCAGGGTTTTAACCAGGGTTTTAAAAACCCCCCCGGGGGAGATAA</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" deletable="false" movable="false" editable="false">
+                            <field name="VAR" variabletype="">position_debut</field>
+                            <value name="VALUE">
+                              <block type="text_indexOf">
+                                <field name="END">FIRST</field>
+                                <value name="VALUE">
+                                  <block type="variables_get">
+                                    <field name="VAR" variabletype="">text</field>
+                                  </block>
+                                </value>
+                                <value name="FIND">
+                                  <shadow type="text">
+                                    <field name="TEXT">abc</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set">
+                                <field name="VAR" variabletype="">position_fin</field>
+                                <next>
+                                  <block type="variables_set" deletable="false" editable="false">
+                                    <field name="VAR" variabletype="">résultat</field>
+                                    <value name="VALUE">
+                                      <block type="text_getSubstring">
+                                        <mutation at1="true" at2="true"></mutation>
+                                        <field name="WHERE1">FROM_START</field>
+                                        <field name="WHERE2">FROM_START</field>
+                                        <value name="STRING">
+                                          <block type="variables_get">
+                                            <field name="VAR" variabletype="">text</field>
+                                          </block>
+                                        </value>
+                                        <value name="AT1">
+                                          <block type="variables_get">
+                                            <field name="VAR" variabletype="">position_debut</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="text_print">
+                                        <value name="TEXT">
+                                          <shadow type="text">
+                                            <field name="TEXT">abc</field>
+                                          </shadow>
+                                          <block type="variables_get">
+                                            <field name="VAR" variabletype="">résultat</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">position_fin</field>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">stop</field>
+              </block>
+              <block type="text_indexOf">
+                <field name="END">FIRST</field>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <field name="VAR" variabletype="">ADN</field>
+                  </block>
+                </value>
+                <value name="FIND">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">start</field>
+              </block>
+            </xml>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

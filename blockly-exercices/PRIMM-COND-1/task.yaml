@@ -1,0 +1,105 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    En informatique, on utilise le concept de **condition** très souvent.
+
+    Avec le bloc ci-dessous, vous pouvez évaluer si une condition est vraie (**TRUE** en anglais) ou fausse (**FALSE** en anglais), ça nous permet de prendre une décision en fonction du résultat.
+    Attention que le résultat sera en anglais
+
+    .. image:: PRIMM-COND-1/cond_bloc.jpg
+
+    Dans la liste déroulante de ce bloc, vous avez accès à plusieurs comparateurs tels que "égal", "différent de", "plus petit que", ...
+
+    .. image:: PRIMM-COND-1/cond_list.jpg
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 4.1 - introduction aux conditions
+network_grading: false
+problems:
+    cond:
+        type: multiple_choice
+        name: 'À votre avis, quelle valeur sera affichée ici ? '
+        header: '.. image:: PRIMM-COND-1/cond_bonjour_equal.jpg'
+        limit: 0
+        choices:
+        -   text: 'True'
+            feedback: Bien joué ! Les deux chaînes de caractères sont identiques
+            valid: true
+        -   text: 'False'
+            feedback: Attention au contenu des blocs et au comparateur entre les deux
+                !
+    cond-4:
+        type: multiple_choice
+        name: 'À votre avis, quelle valeur sera affichée ici ? '
+        header: '.. image:: PRIMM-COND-1/cond_number_not_equal.jpg'
+        limit: 0
+        choices:
+        -   text: 'True'
+            feedback: Bien joué ! 0 n'est pas égal à 7
+            valid: true
+        -   text: 'False'
+            feedback: Attention au contenu des blocs et au comparateur entre les deux
+                !
+    cond-2:
+        type: multiple_choice
+        name: 'À votre avis, quelle valeur sera affichée ici ? '
+        header: '.. image:: PRIMM-COND-1/cond_bonjour_not_equal.jpg'
+        limit: 0
+        choices:
+        -   text: 'False'
+            feedback: Bien joué ! Les deux chaînes sont identiques, le comparateur
+                est donc faux
+            valid: true
+        -   text: 'True'
+            feedback: Attention au contenu des blocs et au comparateur entre les deux
+                !
+    cond-3:
+        type: multiple_choice
+        name: 'À votre avis, quelle valeur sera affichée ici ? '
+        header: '.. image:: PRIMM-COND-1/cond_var_equal.jpg'
+        limit: 0
+        choices:
+        -   text: 'True'
+            feedback: Bien joué ! Les deux chaînes sont différentes, le comparateur
+                est donc vrai
+            valid: true
+        -   text: 'False'
+            feedback: Attention au contenu des blocs et au comparateur entre les deux
+                !
+    cond-5:
+        type: multiple_choice
+        name: 'À votre avis, quelle valeur sera affichée ici ?  (Pour rappel, ce symbole
+            veut dire : à gauche c''est plus petit ou égal à droite)'
+        header: '.. image:: PRIMM-COND-1/var_lower.jpg'
+        limit: 0
+        choices:
+        -   text: 'True'
+            feedback: Bien joué ! 4 est bien supérieur ou égal à 2
+            valid: true
+        -   text: 'False'
+            feedback: Attention au contenu des blocs et au comparateur entre les deux
+                !
+    cond-6:
+        type: multiple_choice
+        name: 'À votre avis, quelle valeur sera affichée ici ? '
+        header: '.. image:: PRIMM-COND-1/zero_lower.jpg'
+        limit: 0
+        choices:
+        -   text: 'False'
+            feedback: Bien joué ! 0 n'est pas supérieur ou égal à 7
+            valid: true
+        -   text: 'True'
+            feedback: Attention au contenu des blocs et au comparateur entre les deux
+                !
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

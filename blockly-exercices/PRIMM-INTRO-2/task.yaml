@@ -1,0 +1,44 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Dans cet exercice, il vous est demandé de trouver ce que le code va afficher quand le bouton ``Exécuter le code`` est appuyé.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 1.2 - code séquentiel - lecture de haut en bas
+network_grading: false
+problems:
+    predict-sequential:
+        type: multiple_choice
+        name: À votre avis, qu'est-ce que le code ci-dessous va afficher ?
+        header: '.. image:: PRIMM-INTRO-2/1-2.jpg'
+        limit: 0
+        choices:
+        -   text: Le texte en une seule fois "Bonjour Tom, comment allez-vous ?".
+            feedback: Comptez le nombre de fois que le bloc ``afficher`` est présent
+        -   text: Le texte en trois parties "Bonjour" "Tom," "comment allez-vous ?".
+            feedback: Bien joué ! Effectivement, il y a trois blocs ``afficher``,
+                l'ordinateur va donc afficher trois messages.
+            valid: true
+        -   text: Le texte en trois parties "bonjour" "tom," "comment allez-vous ?".
+            feedback: Attention aux détails, est-ce que c'est le bon texte ?
+        -   text: Le texte "Bonjour" puis plus rien, car le bloc vert pâle n'est pas
+                correct.
+            feedback: Le bloc vert pâle, comme expliqué dans un exercice précédent
+                est tout à fait correct, c'est le bloc par défaut.
+        -   text: Rien du tout.
+            feedback: Comptez le nombre de fois que le bloc ``afficher`` est présent
+        -   text: Le texte en trois parties "Bonjour" "Tom," "comment allez-vous ?",
+                Mais dans un ordre mélangé, en fonction de comment l'ordinateur décide.
+            feedback: Le code est toujours lu puis exécuté de haut en bas !
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

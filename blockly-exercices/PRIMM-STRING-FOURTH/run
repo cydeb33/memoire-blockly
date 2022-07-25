@@ -1,0 +1,24 @@
+#!/bin/python3
+#Open source licence goes here
+
+import os
+import subprocess
+import shlex
+from inginious import feedback
+from inginious import input
+
+
+if __name__ == "__main__":
+    input.parse_template("substring-extract.py") #Replace sum.py by your filename on this line and the next
+    p = subprocess.Popen(shlex.split("python3 substring-extract.py"), stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
+    make_output = p.communicate()[0].decode('utf-8')
+    if p.returncode:
+        feedback.set_global_result("failed")
+        feedback.set_global_feedback("Votre code n'a pas pu être exécuté. Vérifiez que tous vos blocs sont correctement connectés.")
+        exit(0)
+    elif make_output == 'effrayant, il était tout seul, oui, ou peut-être deux ? Il faisait noir, vous savez, ah, c\'était tellement e\n':
+        feedback.set_global_result("success")
+        feedback.set_global_feedback("Vous avez écrit : " + make_output)
+    else:
+        feedback.set_global_result("failed")
+        feedback.set_global_feedback("Attention, est-ce que vous avez uniquement affiché la sous-chaîne trouvée ? Vous avez écrit : " + make_output)
