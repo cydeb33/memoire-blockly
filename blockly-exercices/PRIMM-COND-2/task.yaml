@@ -1,0 +1,82 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |+
+    Selon les valeurs retournées par une condition, différents blocs peuvent être exécutés. Ci-dessous dans le bloc ``si..``, si la condition retourne la valeur **True**, le bloc va exécuter tous les blocs à l'intérieur du ``faire..``, si la condition retourne la valeur **False** les blocs dans ``faire..`` seront ignorés.
+
+    .. image:: PRIMM-COND-2/if_bloc.jpg
+
+    Il est possible de rajouter des ``sinon..`` comme dans le bloc ci-dessous. Les blocs contenus dans le ``sinon..`` seront exécutés si la condition retourne la valeur **False**.
+
+    .. image:: PRIMM-COND-2/if_else_bloc.jpg
+
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 4.2 - introduction au ``Si.. sinon``
+network_grading: false
+problems:
+    cond-2-1:
+        type: multiple_choice
+        name: 'À votre avis, quelle valeur sera affichée ici ? '
+        header: '.. image:: PRIMM-COND-2/if_else_bloc_var.jpg'
+        limit: 0
+        choices:
+        -   text: '"Les deux sont différents"'
+            feedback: 'Bien joué ! 0 n''est pas égal à 3, la condition est donc fausse
+                (''FALSE''), le contenu du ``sinon`` est donc exécuté '
+            valid: true
+        -   text: '"Les deux sont équivalents"'
+            feedback: 'Attention au comparateur logique et au contenu des variables
+                ! '
+    cond-2-2:
+        type: multiple_choice
+        name: 'À votre avis, quelle valeur sera affichée ici ? '
+        header: '.. image:: PRIMM-COND-2/if_else_bloc_string.jpg'
+        limit: 0
+        choices:
+        -   text: '"Les deux sont équivalents"'
+            feedback: 'Bien joué ! Les chaînes sont identiques, la condition est donc
+                vraie (''TRUE''), le contenu du ``faire`` est donc exécuté '
+            valid: true
+        -   text: '"Les deux sont différents"'
+            feedback: 'Attention au comparateur logique et au contenu des variables
+                ! '
+    cond-2-3:
+        type: multiple_choice
+        name: 'À votre avis, quelle valeur sera affichée ici ? '
+        header: '.. image:: PRIMM-COND-2/if_else_bloc_var_number.jpg'
+        limit: 0
+        choices:
+        -   text: '"Les deux sont équivalents"'
+            feedback: 'Attention au comparateur logique et au contenu des variables
+                ! '
+        -   text: '"Les deux sont différents"'
+            feedback: 'Attention, est-ce que le bloc "afficher Bonjour !" fait partie
+                de ``si... sinon`` ? '
+        -   text: '"Les deux sont équivalents" puis "Bonjour !"'
+            feedback: 'Attention au comparateur logique et au contenu des variables
+                ! '
+        -   text: '"Les deux sont différents" puis "Bonjour !"'
+            feedback: 'Bien joué ! Le bloc ``afficher Bonjour !`` étant en dehors
+                du bloc ``si... sinon``, il sera toujours exécuté. '
+            valid: true
+        -   text: '"Bonjour !"'
+            feedback: 'Attention au comparateur logique et au contenu des variables
+                ! '
+        -   text: '"Bonjour !" puis "Les deux sont équivalents"'
+            feedback: Attention à l'ordre dans lequel les blocs sont disposés, en
+                programmation le code se lit de haut en bas.
+        -   text: '"Bonjour !" puis "Les deux sont différents"'
+            feedback: Attention à l'ordre dans lequel les blocs sont disposés, en
+                programmation le code se lit de haut en bas.
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
