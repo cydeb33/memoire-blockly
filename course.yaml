@@ -73,18 +73,6 @@ dispenser_data:
         PRIMM-COND-5: 2
         PRIMM-COND-6: 3
     title: PRIMM quatrième séquence - conditions
--   config:
-        closed: false
-    id: jobblockly
-    rank: 4
-    tasks_list:
-        4ennemiesTEST: 2
-        idConflict: 3
-        pegmanTEST: 1
-        pvzTEST: 0
-        test: 5
-        test_ol: 4
-    title: jobBlockly
 toc:
 -   id: primm_print_first_cycle
     rank: 0
