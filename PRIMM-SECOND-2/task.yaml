@@ -1,0 +1,126 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    *Le premier policier sur la scène a noté qu'il y a 3 poils de couleurs différentes. Son collègue qui est repassé sur la scène du vol le lendemain en a encore trouvé 1 d'une autre couleur plus loin et a voulu modifier la valeur contenue dans la variable* ``nombre_poils`` .
+
+    La variable ``nombre_poils`` devrait donc contenir la valeur 4 à la fin, cependant le policier s'est trompé avec ses blocs.
+
+    À votre avis, qu'est ce qui ne va pas dans ce programme ?
+
+    1) Avant d'appuyer sur ``Exécuter le code``, essayez de trouver ou pourrait être la ou les erreurs.
+
+    2) Une fois que vous avez réfléchi à l'erreur présente, appuyez sur ``Exécuter le code`` pour voir si vous aviez raison.
+
+    3) Modifiez les blocs pour que la variable ``nombre_poils`` qui contient la valeur numérique 3 soit correctement incrémentée de 1.
+
+    4) Affichez la valeur contenue dans la variable ``nombre_poils`` à l'écran.
+    5) Une fois fini l'étape 4, appuyez sur ``Soumettre``
+environment_id: math
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 3.4  - l'erreur d'un inspecteur - type de donnée et incrémentation
+network_grading: false
+problems:
+    investigate-increment:
+        type: blockly
+        name: ''
+        header: ''
+        options:
+            maxBlocks: Infinity
+            speed: '60'
+            toolboxPosition: start
+            media: /plugins/blockly/static/blockly/media/
+            css: true
+            grid:
+                spacing: 20
+                length: 3
+                colour: '#ccc'
+                snap: true
+            zoom:
+                controls: true
+                startScale: 1.0
+                maxScale: 3.0
+                minScale: 0.3
+                scaleSpeed: 1.2
+                wheel: false
+            oneBasedIndex: true
+            scrollbars: true
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+                <category name="Texte" colour="180">
+                    <block type="text">
+                <field name="TEXT"></field>
+              </block>
+            <block type="text_print">
+                <value name="TEXT">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+                    </category>
+                <category name="Math" colour="210">
+                    <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+                    </category>
+
+
+
+            </xml>
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables>
+                <variable type="">nombre_poils</variable>
+              </variables>
+              <block type="variables_set" deletable="false" movable="false" editable="false">
+                <field name="VAR" variabletype="">nombre_poils</field>
+                <value name="VALUE">
+                  <block type="text">
+                    <field name="TEXT">3</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="math_change" deletable="false" movable="false" editable="false">
+                    <field name="VAR" variabletype="">nombre_poils</field>
+                    <value name="DELTA">
+                      <shadow type="math_number">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="math_number" deletable="false" movable="false">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print" deletable="false" movable="false" editable="false">
+                        <value name="TEXT">
+                          <shadow type="text">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="variables_get" deletable="false" movable="false" editable="false">
+                            <field name="VAR" variabletype="">nombre_poils</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </xml>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

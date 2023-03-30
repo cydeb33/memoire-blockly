@@ -1,0 +1,39 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Ici, vous pouvez voir une méthode de résolution algorithmique, quand vous êtes un peu perdu et que vous ne savez pas par où commencer, pensez à décomposer votre problème en plusieurs petites étapes plus simple, comme par exemple :
+
+    1) Trouver la position de début de la sous-chaîne
+    2) Trouver la position de fin de la sous-chaîne
+    3) Extraire la sous-chaîne de la grande chaîne
+    4) Enregistrer la sous-chaîne dans une variable
+
+    5) Affiche le contenu de la variable à l'écran pour vérifier que c'est correct.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 3.6.bis - Aide de résolution - Décomposition du problème
+network_grading: false
+problems:
+    check:
+        type: multiple_choice
+        name: Avez-vous eu besoin de cette aide pour résoudre l'exercice précédent
+            ?
+        header: ''
+        limit: 0
+        choices:
+        -   text: Oui
+            valid: true
+        -   text: Non
+            valid: true
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

@@ -1,0 +1,42 @@
+{	
+	"map":{
+		"layout":[ 
+				[[0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 2, 1, 3, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0]],
+
+                [[0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 2, 1, 1, 1, 1, 3, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0]]       
+        ],
+		"animationSpeed":50,
+		"squareType":{
+    					"WALL": 0,
+    					"OPEN": 1,
+    					"START": 2,
+    					"FINISH": 3
+					},
+		"startDirection":"EAST"
+			},
+	"visuals":{
+    "squareSize":50,
+    "avatarHeight":52,
+    "avatarWidth":49,
+		"sprite":"pegman.png",
+		"tiles":"tiles_pegman.png",
+		"marker":"marker.png",
+		"graph":false,
+		"winSound":["win.mp3", "win.ogg"],
+		"crashSound":["fail_pegman.mp3", "fail_pegman.ogg"]
+	}
+}

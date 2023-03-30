@@ -1,0 +1,70 @@
+{	
+	"map":{
+		"layout": [[0, 0, 0, 0, 0, 0, 0, 0],
+        	       [0, 0, 0, 0, 0, 0, 0, 0],
+        	       [0, 0, 1, 1, 1, 1, 0, 0],
+        	       [0, 0, 2, 1, 1, 1, 0, 0],
+        	       [0, 0, 1, 1, 1, 1, 0, 0],
+        	       [0, 0, 1, 1, 1, 1, 0, 0],
+        	       [0, 0, 0, 0, 0, 0, 0, 0],
+        	       [0, 0, 0, 0, 0, 0, 0, 0]],
+        "specialCells":{
+            "honey":[
+                {
+                    "x":4,
+                    "y":4,
+                    "value":2
+                }
+            ],
+        	"redFlower":[ 
+        		{
+        			"x":3,
+        			"y":4,
+        			"value":2
+        		},
+                {
+                    "x":3,
+                    "y":3,
+                    "value":2,
+		    "or":"honey"
+                }
+
+        	],
+        	"purpleFlower":[
+                {
+                    "x":5,
+                    "y":5,
+		    "range":[0, 2]
+                }
+            ],
+        	"cloud":[
+                {
+                    "x":3,
+                    "y":3
+                }
+            ]
+        },
+		"animationSpeed":50,
+		"squareType":{
+					    "WALL": 0,
+					    "OPEN": 1,
+					    "START": 2,
+					    "OBSTACLE": 3
+					},
+		"startDirection":"EAST"
+			},
+	"visuals":{
+        "squareSize":50,
+        "avatarHeight":52,
+        "avatarWidth":49,
+		"sprite":"avatar.png",
+		"tiles":"tiles.png",
+		"redFlower":"redFlower.png",
+		"purpleFlower":"purpleFlower.png",
+		"honey":"honey.png",
+        "cloud":"cloud.png",
+        "cloudAnimation":"cloud_hide.gif",
+		"obstacleScale":1.0,
+		"background":"background.png"
+		}
+}

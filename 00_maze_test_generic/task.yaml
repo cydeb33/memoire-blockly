@@ -1,0 +1,83 @@
+accessible: true
+author: Florian Thuin
+categories: []
+contact_url: ''
+context: Le blocs « Si/Sinon » vérifie une condition et puis fait une chose OU une
+    autre. Pour amener le personnage au tournesol, essaie d'utiliser ce nouveau bloc.
+environment_id: default
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: test générique
+network_grading: false
+order: 0
+problems:
+    code:
+        type: blockly
+        name: ''
+        header: ''
+        options:
+            visual:
+                position: left
+            maxBlocks: Infinity
+            speed: '60'
+            trashcan: true
+            toolboxPosition: start
+            media: /plugins/blockly/static/blockly/media/
+            css: true
+            oneBasedIndex: true
+            scrollbars: true
+            sounds: true
+        files:
+        - ../$common/maze.js
+        - ../$common/maze_interpreter.js
+        blocks_files:
+        - blocks.js
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <category name="mouvement" colour="330">
+              <variables></variables>
+              <block type="maze_moveForward"></block>
+              <block type="maze_turn">
+                <field name="DIR">turnLeft</field>
+              </block>
+              <block type="maze_turn">
+                <field name="DIR">turnRight</field>
+              </block>
+            </category>
+              <category name="boucle" colour="120">
+              <variables></variables>
+              <block type="maze_forever"></block>
+            </category>
+              <category name="condition" colour="225">
+              <variables></variables>
+              <block type="maze_ifElse">
+                <field name="DIR">isPathForward</field>
+              </block>
+            </category>
+            </xml>
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="maze_forever">
+                <statement name="DO">
+                  <block type="maze_ifElse">
+                    <field name="DIR">isPathForward</field>
+                  </block>
+                </statement>
+              </block>
+            </xml>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

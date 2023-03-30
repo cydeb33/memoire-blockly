@@ -1,0 +1,97 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Bonjour et bienvenue dans cette série d'exercices **Blockly**.
+    **Blockly** c'est un langage de programmations par blocs, c'est-à-dire un langage qui permet de coder directement avec des blocs.
+
+
+    *Il y a eu un cambriolage au Louvre, la Joconde a disparu. On vous demande en tant qu'apprentis biologistes d'aider la police à mener l'enquête.*
+
+    Avant de pouvoir aider la police, vous devez d'abord prendre en main les outils qui vont vous permettre de coder. Grâce à Blockly c'est super facile.
+
+    Ci-dessous, à gauche de l'espace pointillé, vous pouvez voir les blocs qui sont disponibles pour résoudre l'exercice. Avec la souris, on peut les glisser puis les déposer sur l'espace de travail qui est en pointillé. Si vous voulez supprimer un bloc, il suffit de le remettre d'où il vient.
+
+    1) Essayez de prendre un bloc ``afficher`` dont le but est d'afficher une information à l'écran et mettez le dans l'espace de travail.
+
+    .. image:: PRIMM-INTRO-1/afficher.jpg
+
+
+    2) Appuyez sur le bouton vert ``Exécuter le code`` en haut à gauche, qui va exécuter le code.
+
+    .. image:: PRIMM-INTRO-1/executer.jpg
+
+
+    Chaque bloc ``afficher`` vient avec le texte "abc" pré écrit dans un bloc de texte collé, en vert clair. Vous pouvez cliquer sur "abc" et écrire un autre texte ou le remplacer par un autre bloc vert foncé (le bloc ci-dessous) leur but est le même.
+
+    .. image:: PRIMM-INTRO-1/blank.jpg
+
+
+    3) Écrivez votre prénom dans un bloc ``afficher`` et appuyez sur ``Exécuter le code``
+
+    Vous pouvez aussi voir aussi qu'il est possible de coller plusieurs blocs l'un en dessous de l'autre, chaque bloc représente une ligne de code. Si vous voulez décoller des blocs, il faut prendre celui en dessous en premier.
+
+    4) Quand vous avez fini l'exercice, appuyez sur le bouton ``Soumettre`` tout en bas de l'écran.
+
+    .. image:: PRIMM-INTRO-1/soumettre.jpg
+        :height: 40
+environment_id: default
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 1.1 - Introduction à Blockly
+network_grading: false
+problems:
+    print-blockly:
+        type: blockly
+        name: ''
+        header: ''
+        options:
+            maxBlocks: Infinity
+            speed: '60'
+            toolboxPosition: start
+            media: /plugins/blockly/static/blockly/media/
+            css: true
+            grid:
+                spacing: 20
+                length: 3
+                colour: '#ccc'
+                snap: true
+            zoom:
+                controls: true
+                startScale: 1.0
+                maxScale: 3.0
+                minScale: 0.3
+                scaleSpeed: 1.2
+                wheel: false
+            oneBasedIndex: true
+            scrollbars: true
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="text">
+                <field name="TEXT"></field>
+              </block>
+              <block type="text_print">
+                <value name="TEXT">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+            </xml>
+        workspace: <xml></xml>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

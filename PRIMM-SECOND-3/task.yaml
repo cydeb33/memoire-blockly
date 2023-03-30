@@ -1,0 +1,57 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    *Le laboratoire voudrait bien savoir combien de tests il va devoir faire au total, c'est pourquoi il fait la somme des indices et des poils récoltés pour ses échantillons. (mais il a besoin de garder une trace du nombre de poils et du nombre d'indices séparément pour le dossier.)*
+
+    Les variables sont très pratiques pour ne pas devoir écrire plusieurs fois une information, on aura tendance à les réutiliser à travers tout un programme. Vous pouvez par exemple prendre deux variables, ``nombre_indices`` et ``nombre_poils``, additionner leur contenu puis mettre le résultat dans une troisième variable ``nombre_echantillons``.
+
+    1) À votre avis, combien d'échantillons au total le laboratoire recevra-t-il ?
+
+    .. image:: PRIMM-SECOND-3/add.JPG
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 3.5 - les variables et leur contenu
+network_grading: false
+problems:
+    first:
+        type: multiple_choice
+        name: 'Le nombre d''échantillons affiché sera : '
+        header: ''
+        limit: 0
+        choices:
+        -   text: '6 '
+            feedback: 'Bien joué ! '
+            valid: true
+        -   text: '0 '
+            feedback: Attention au contenu de chaque variable, quelle valeur contiennent-elles
+                ? De combien sont-elles incrémentées ?
+        -   text: '2'
+            feedback: Attention au contenu de chaque variable, quelle valeur contiennent-elles
+                ? De combien sont-elles incrémentées ?
+        -   text: '1'
+            feedback: Attention au contenu de chaque variable, quelle valeur contiennent-elles
+                ? De combien sont-elles incrémentées ?
+        -   text: 2*2
+            feedback: Attention au contenu de chaque variable, quelle valeur contiennent-elles
+                ? De combien sont-elles incrémentées ?
+        -   text: '42'
+            feedback: Attention au contenu de chaque variable, quelle valeur contiennent-elles
+                ? De combien sont-elles incrémentées ?
+        -   text: '123'
+            feedback: Attention au contenu de chaque variable, quelle valeur contiennent-elles
+                ? De combien sont-elles incrémentées ?
+        -   text: '4'
+            feedback: Attention au contenu de chaque variable, quelle valeur contiennent-elles
+                ? De combien sont-elles incrémentées ?
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

@@ -1,0 +1,102 @@
+accessible: false
+author: ''
+categories: []
+contact_url: ''
+context: |
+    Il y a eu un problème au service informatique, et les blocs bleu pour mettre des chiffre ne fonctionnent plus, on te dit que tu peux faire la même chose que dans l'image ci-dessous en utilisant uniquement les blocs disponibles.
+
+    .. container:: text-center
+
+        .. image:: PRIMM-STRING-FIFTH/nesting.jpg
+
+    Vois-tu comment arriver au même résultat avec les blocs bleu en moins et un seul bloc "afficher" ?
+
+
+    Cet exercice à pour but de te montrer que comme en programmation, les blocs peuvent être mis les uns dans les autres, tu peux ainsi gagner de la place, mais attention à ne pas rendre ton code trop compliqué ou illisible.
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: PRIMM- investigate modify - imbriquer les blocs
+network_grading: false
+problems:
+    nested-intro:
+        type: blockly
+        name: ''
+        header: ''
+        options:
+            maxBlocks: Infinity
+            speed: '60'
+            toolboxPosition: start
+            media: plugins/blockly/static/blockly/media/
+            css: true
+            grid:
+                spacing: 20
+                length: 3
+                colour: '#ccc'
+                snap: true
+            zoom:
+                controls: true
+                startScale: 1.0
+                maxScale: 3.0
+                minScale: 0.3
+                scaleSpeed: 1.2
+                wheel: false
+            oneBasedIndex: true
+            scrollbars: true
+        toolbox: <xml></xml>
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="text">
+                <field name="TEXT">Bonjour messieurs, oui j'ai vu quelque chose, mais je ne me rappelle plus bien, vous savez c'était tellement effrayant, il était tout seul oui, ou peut-être deux ? il faisait noir vous savez, ah c'était tellement effrayant, j'aurais bien besoin d'un thé, j'ai vu qu'un des suspect était roux oui comme mon chat, l'autre je ne sais pas je n'ai rien vu, j'espère qu'ils le trouveront !</field>
+              </block>
+              <block type="text">
+                <field name="TEXT">Bonjour messieurs, oui j'ai vu quelque chose, mais je ne me rappelle plus bien, vous savez c'était tellement effrayant, il était tout seul oui, ou peut-être deux ? il faisait noir vous savez, ah c'était tellement effrayant, j'aurais bien besoin d'un thé, j'ai vu qu'un des suspect était roux oui comme mon chat, l'autre je ne sais pas je n'ai rien vu, j'espère qu'ils le trouveront !</field>
+              </block>
+              <block type="text">
+                <field name="TEXT">Bonjour messieurs, oui j'ai vu quelque chose, mais je ne me rappelle plus bien, vous savez c'était tellement effrayant, il était tout seul oui, ou peut-être deux ? il faisait noir vous savez, ah c'était tellement effrayant, j'aurais bien besoin d'un thé, j'ai vu qu'un des suspect était roux oui comme mon chat, l'autre je ne sais pas je n'ai rien vu, j'espère qu'ils le trouveront !</field>
+              </block>
+              <block type="text_print">
+                <value name="TEXT">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+              <block type="text_getSubstring">
+                <mutation at1="true" at2="true"></mutation>
+                <field name="WHERE1">FROM_START</field>
+                <field name="WHERE2">FROM_START</field>
+              </block>
+              <block type="text_indexOf">
+                <field name="END">LAST</field>
+                <value name="FIND">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text">
+                    <field name="TEXT">effrayant</field>
+                  </block>
+                </value>
+              </block>
+              <block type="text_indexOf">
+                <field name="END">FIRST</field>
+                <value name="FIND">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text">
+                    <field name="TEXT">effrayant</field>
+                  </block>
+                </value>
+              </block>
+            </xml>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

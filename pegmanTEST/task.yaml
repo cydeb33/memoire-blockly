@@ -1,0 +1,66 @@
+accessible: true
+author: Celine Deknop
+context: Here, a general context if you want, or simply the empty quote ('')
+environment: default
+evaluate: best
+groups: false
+input_random: '0'
+limits:
+    memory: '100'
+    output: '2'
+    time: '30'
+name: ExerciceName
+network_grading: false
+order: 4
+problems:
+    subProblem1:
+        options:
+            scrollbars: true
+            zoom:
+                startScale: 1.0
+                controls: true
+                scaleSpeed: 1.2
+                minScale: 0.3
+                maxScale: 3.0
+                wheel: false
+            grid:
+                length: 3
+                spacing: 20
+                colour: '#ccc'
+                snap: true
+            visual:
+                position: left
+            oneBasedIndex: true
+            toolboxPosition: start
+            trashcan: true
+            css: true
+            maxBlocks: Infinity
+            media: /plugins/blockly/static/blockly/media/
+            sounds: true
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="maze_moveForward"></block>
+              <block type="maze_turn">
+                <field name="DIR">turnLeft</field>
+              </block>
+              <block type="maze_turn">
+                <field name="DIR">turnRight</field>
+              </block>
+              <block type="maze_forever"></block>
+            </xml>
+        files:
+        - maze.js
+        - interpreter.js
+        name: ''
+        workspace: <xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+        blocks_files:
+        - blocks.js
+        header: Here, any instructions you want
+        type: blockly
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+tags: {}
+weight: 1.0

@@ -1,0 +1,55 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Dans l'exercice précédent les blocs affichaient soit 0 si la sous-chaîne est absente, soit un nombre plus grand que 0 si elle est présente. Ce nombre, c'est la position de départ de la sous-chaîne dans la chaîne de caractères.
+
+    C'est très pratique, grâce à ça, on peut utiliser le prochain bloc ! Ce bloc prend une position de début et une position de fin, il va ensuite afficher tous les caractères présents entre la position de début jusqu'à la position de fin incluse, nous permettant d'extraire une sous-chaîne.
+
+    .. container:: text-center
+
+        .. image:: PRIMM-PREDICT-SUBSTRING/extract.jpg
+environment_id: mcq
+environment_parameters: {}
+environment_type: mcq
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 2.5 - Introduction à l'extraction de sous-chaîne
+network_grading: false
+problems:
+    extract_substring:
+        type: multiple_choice
+        name: À votre avis, quel va être le message affiché à l'écran?
+        header: '.. image:: PRIMM-PREDICT-SUBSTRING/extract_substring.jpg'
+        limit: 0
+        choices:
+        -   text: le message "our !"
+            feedback: Bien joué ! le "o" est à la position 5 et le "!" à la 9
+            valid: true
+        -   text: le message "Bonjour !"
+            feedback: Attention que le but de ce bloc est d'extraire une partie de
+                la chaîne "Bonjour !"
+        -   text: le message "Bonj"
+            feedback: Attention aux positions spécifiées dans le bloc
+        -   text: le message "Bonjour"
+            feedback: Attention aux positions spécifiées dans le bloc
+        -   text: rien du tout
+            feedback: Le but de ce bloc est d'extraire une partie de la chaîne "Bonjour
+                !", il va donc extraire à partir de la position 5 jusqu'à la 9
+        -   text: le nombre 5 et le nombre 9
+            feedback: Attention que ce sont les positions spécifiées dans le bloc,
+                à quoi servent-elles ?
+        -   text: le nombre 59
+            feedback: Attention que le but de ce bloc est d'extraire une partie de
+                la chaîne "Bonjour !"
+        -   text: le message "Bonj 5 our! 9"
+            feedback: Attention que le but de ce bloc est d'extraire une partie de
+                la chaîne "Bonjour !" donc si on met 1 à 3 on aura "Bon"
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

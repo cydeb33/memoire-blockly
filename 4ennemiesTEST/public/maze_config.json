@@ -1,0 +1,41 @@
+{	
+	"map":{
+		"layout":[ 
+				[[0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0],
+      			 [0, 0, 0, 0, 4, 0, 0, 0],
+      			 [0, 0, 0, 0, 1, 0, 0, 0],
+      			 [0, 0, 2, 1, 1, 1, 1, 3],
+      			 [0, 0, 0, 1, 0, 4, 0, 0],
+      			 [0, 0, 4, 1, 4, 0, 0, 0],
+      			 [0, 0, 0, 0, 0, 0, 0, 0]]       
+        ],
+		"animationSpeed":50,
+		"squareType":{
+				"WALL": 0,
+				"OPEN": 1,
+				"START": 2,
+				"FINISH": 3,
+				"OBSTACLE": 4,
+				"STARTANDFINISH": 5
+				},
+		"startDirection":"EAST"
+			},
+	"visuals":{
+		"squareSize":50,
+		"avatarHeight":80,
+		"avatarWidth":72,
+		"sprite":"heros.png",
+		"tiles":"chemin-corr.png",
+		"marker":"stand-robot.gif",
+		"goalAnimation":"robot-victoire.gif",
+		"obstacleIdle":["stand-cage.png", "stand-singe.gif", "stand-trou.png", "stand-poubelle.gif"],
+		"obstacleAnimation":["kill-cage.gif", "kill-singe.gif", "kill-trou.gif", "kill-poubelle.gif"],
+		"obstacleScale":1.7,
+		"background":"pelouse.png",
+		"graph":false,
+		"obstacleSound":[],
+		"winSound":[],
+		"crashSound":[]
+	}
+}

@@ -1,0 +1,90 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |4-
+     Ici, vous disposez de tous les blocs nécessaires pour faire l'exercice, vous n'avez pas le droit de les modifier, et même certains blocs ne peuvent pas être glissés, à vous de trouver comment disposer les blocs pour résoudre l'exercice.
+
+    1) En utilisant les blocs disponibles, trouvez comment afficher que la chaine de caractères : "Bonjour !"  contient plus de 6 caractères.
+    2) Une fois fini l'étape 1, appuyez sur ``Soumettre``
+environment_id: math
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 4.3 - Utiliser les blocs de condition
+network_grading: false
+problems:
+    test:
+        type: blockly
+        name: ''
+        header: ''
+        options:
+            maxBlocks: Infinity
+            speed: '60'
+            toolboxPosition: start
+            media: /plugins/blockly/static/blockly/media/
+            css: true
+            grid:
+                spacing: 20
+                length: 3
+                colour: '#ccc'
+                snap: true
+            zoom:
+                controls: true
+                startScale: 1.0
+                maxScale: 3.0
+                minScale: 0.3
+                scaleSpeed: 1.2
+                wheel: false
+            oneBasedIndex: true
+            scrollbars: true
+        toolbox: <xml></xml>
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="logic_compare" editable="false">
+                <field name="OP">GT</field>
+                <value name="B">
+                  <block type="math_number" deletable="false" movable="false" editable="false">
+                    <field name="NUM">6</field>
+                  </block>
+                </value>
+              </block>
+              <block type="text_length" editable="false">
+                <value name="VALUE">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+              <block type="text" editable="false">
+                <field name="TEXT">Bonjour !</field>
+              </block>
+              <block type="controls_if" movable="false" editable="false">
+                <statement name="DO0">
+                  <block type="text_print" movable="false" editable="false">
+                    <value name="TEXT">
+                      <shadow type="text">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="text" movable="false" editable="false">
+                        <field name="TEXT">Bonjour ! contient plus que 6 caractères</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </xml>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

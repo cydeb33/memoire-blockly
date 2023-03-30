@@ -1,0 +1,280 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    *Grâce à votre programme la police à pu définir l'origine animale ou humaine des poils, le poil roux appartenait à un chat ! Grâce à l'aide de la gardienne, on sait que le directeur du musée a un chat roux. Coïncidence ? Vérifions ça ! Parmi les poils restants il y avait un poil humain blond et long. Malgré les tentatives du directeur de camoufler sa calvitie avec une perruque noire, la gardienne nous confirme qu'il est blond.*
+
+    *On touche au but, à vous de prouver ou non la culpabilité du directeur en comparant son ADN avec celui du poil blond.*
+
+    1) En vous aidant des blocs utilisés dans les exercices précédents, récupérez la séquence ADN du poil. (La séquence commence par le premier ATG présent dans l'ADN du poil et termine par le premier TAA présent dans l'ADN du poil).
+    2) Cherchez si la séquence que vous avez réussi à extraire à l'étape 1 dans l'ADN du poil, est aussi présente dans l'ADN du directeur pour savoir si les poils correspondent (Vous avez à plusieurs reprises utilisé un bloc qui permet de vérifier rapidement si il y a occurrence d'une sous-chaîne). Si les séquences sont présentes dans les deux poils, faites que le bloc ``Si ... sinon`` affiche le message "L'ADN du poil correspond à celui du directeur, c'est lui le coupable !", sinon affichez le deuxième message prouvant qu'il est innocent.
+    3) Une fois fini l'étape 2, appuyez sur ``Soumettre`` pour terminer l'enquête.
+environment_id: math
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 4.6 - Le poil fatal - Extraction de sous-chaîne et comparaison - *Exercice
+    Final*
+network_grading: false
+problems:
+    cond-4-1:
+        type: blockly
+        name: ''
+        header: ''
+        options:
+            maxBlocks: Infinity
+            speed: '60'
+            toolboxPosition: start
+            media: /plugins/blockly/static/blockly/media/
+            css: true
+            grid:
+                spacing: 20
+                length: 3
+                colour: '#ccc'
+                snap: true
+            zoom:
+                controls: true
+                startScale: 1.0
+                maxScale: 3.0
+                minScale: 0.3
+                scaleSpeed: 1.2
+                wheel: false
+            oneBasedIndex: true
+            scrollbars: true
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables>
+                <variable type="">text</variable>
+              </variables>
+                <category name="Variables" colour="330">
+              <variables>
+                <variable type="">text</variable>
+              </variables>
+              <block type="variables_set">
+                <field name="VAR" variabletype="">text</field>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">text</field>
+              </block>
+            </category>
+                <category name="Math" colour="210">
+                    <block type="math_number">
+                        <field name="NUM">0</field>
+                      </block>
+                </category>
+                <category name="Texte" colour="180">
+                     <block type="text">
+                <field name="TEXT">L'ADN du poil correspond à celui du directeur, c'est lui le coupable !</field>
+              </block>
+
+              <block type="text">
+                <field name="TEXT">L'ADN ne correspond pas, il n'est pas coupable.</field>
+              </block>
+
+              <block type="text_indexOf">
+                <field name="END">FIRST</field>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <field name="VAR" variabletype="">text</field>
+                  </block>
+                </value>
+                <value name="FIND">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+              <block type="text_getSubstring">
+                <mutation at1="true" at2="true"></mutation>
+                <field name="WHERE1">FROM_START</field>
+                <field name="WHERE2">FROM_START</field>
+                <value name="STRING">
+                  <block type="variables_get">
+                    <field name="VAR" variabletype="">text</field>
+                  </block>
+                </value>
+              </block>
+              <block type="text_print">
+                <value name="TEXT">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+                </category>
+                <category name="Logique" colour="210">
+                    <block type="controls_if">
+                        <mutation else="1"></mutation>
+                      </block>
+                      <block type="logic_compare">
+                        <field name="OP">EQ</field>
+                      </block>
+                </category>
+
+
+            </xml>
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables>
+                <variable type="">position_debut</variable>
+                <variable type="">start</variable>
+                <variable type="">stop</variable>
+                <variable type="">ADN_directeur</variable>
+                <variable type="">ADN_poil</variable>
+                <variable type="">sequence</variable>
+                <variable type="">position_fin</variable>
+              </variables>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">position_debut</field>
+              </block>
+              <block type="variables_set" deletable="false" editable="false">
+                <field name="VAR" variabletype="">start</field>
+                <value name="VALUE">
+                  <block type="text">
+                    <field name="TEXT">ATG</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" deletable="false" editable="false">
+                    <field name="VAR" variabletype="">stop</field>
+                    <value name="VALUE">
+                      <block type="text">
+                        <field name="TEXT">TAA</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" deletable="false" editable="false">
+                        <field name="VAR" variabletype="">ADN_poil</field>
+                        <value name="VALUE">
+                          <block type="text">
+                            <field name="TEXT">TTGCCCCCCTAGTGTGTACACGACTACCCCTAGAAAACCGAACTCCGCACTGCGTTATTGTTGAATCGTCATGTTGGGGCCCGGGAGAGGGAGAAACTAATATTTTTTTTGTCATGTTGGGGCCCGGGAGAGGGAGAGTAA</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" deletable="false" editable="false">
+                            <field name="VAR" variabletype="">ADN_directeur</field>
+                            <value name="VALUE">
+                              <block type="text">
+                                <field name="TEXT">TTGTTGAATCGTCATGTTGGGGCCCGGGAGAGGGAGAAACTAATATTTTTTTTGTCATGTTGGGGCCCGGGAGAGGGAGAGTAA</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" deletable="false" editable="false">
+                                <field name="VAR" variabletype="">position_debut</field>
+                                <next>
+                                  <block type="variables_set" deletable="false" editable="false">
+                                    <field name="VAR" variabletype="">position_fin</field>
+                                    <next>
+                                      <block type="variables_set" deletable="false" editable="false">
+                                        <field name="VAR" variabletype="">sequence</field>
+                                        <next>
+                                          <block type="controls_if" deletable="false" movable="false" editable="false">
+                                            <mutation else="1"></mutation>
+                                            <value name="IF0">
+                                              <block type="logic_compare" deletable="false" movable="false" editable="false">
+                                                <field name="OP">NEQ</field>
+                                                <value name="B">
+                                                  <block type="math_number" deletable="false" movable="false" editable="false">
+                                                    <field name="NUM">0</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="text_print" deletable="false" movable="false" editable="false">
+                                                <value name="TEXT">
+                                                  <shadow type="text">
+                                                    <field name="TEXT">abc</field>
+                                                  </shadow>
+                                                  <block type="text" deletable="false" movable="false">
+                                                    <field name="TEXT">L'ADN du poil correspond à celui du directeur, c'est lui le coupable !</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                            <statement name="ELSE">
+                                              <block type="text_print" deletable="false" movable="false" editable="false">
+                                                <value name="TEXT">
+                                                  <shadow type="text">
+                                                    <field name="TEXT">abc</field>
+                                                  </shadow>
+                                                  <block type="text" deletable="false" movable="false" editable="false">
+                                                    <field name="TEXT">L'ADN ne correspond pas, il n'est pas coupable.</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+              <block type="text_indexOf">
+                <field name="END">FIRST</field>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <field name="VAR" variabletype="">ADN_directeur</field>
+                  </block>
+                </value>
+                <value name="FIND">
+                  <shadow type="text">
+                    <field name="TEXT"></field>
+                  </shadow>
+                </value>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">stop</field>
+              </block>
+              <block type="text_indexOf">
+                <field name="END">FIRST</field>
+                <value name="VALUE">
+                  <block type="variables_get">
+                    <field name="VAR" variabletype="">ADN_poil</field>
+                  </block>
+                </value>
+                <value name="FIND">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">ADN_directeur</field>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">start</field>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">ADN_poil</field>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">sequence</field>
+              </block>
+              <block type="variables_get">
+                <field name="VAR" variabletype="">position_fin</field>
+              </block>
+            </xml>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0

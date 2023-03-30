@@ -1,0 +1,109 @@
+accessible: true
+author: ''
+categories: []
+contact_url: ''
+context: |-
+    Grâce à l'informatique, si on veut savoir la taille d'un texte, on ne doit pas compter caractère par caractère. Le bloc ci-dessous vous permet de calculer le nombre de caractères que contient votre chaîne de caractères.
+
+    .. image:: PRIMM-STRING-FIRST/2-1.jpg
+
+    1) Appuyez sur ``Exécuter le code`` pour voir ce que le nouveau bloc affiche comme résultat.
+
+    2) Écrivez votre nom et prénom et appuyez sur ``Exécuter le code``.
+
+    3) Une fois fini l'étape 2, appuyez sur ``soumettre``.
+environment_id: math
+environment_parameters:
+    limits:
+        time: '30'
+        hard_time: ''
+        memory: '100'
+    run_cmd: ''
+environment_type: docker
+evaluate: best
+file: ''
+groups: false
+input_random: '0'
+name: Séquence 2.1 -  introduction au bloc "longueur de"
+network_grading: false
+problems:
+    bloc-substring:
+        type: blockly
+        name: ''
+        header: |4+
+
+        options:
+            maxBlocks: Infinity
+            speed: '60'
+            toolboxPosition: start
+            media: /plugins/blockly/static/blockly/media/
+            css: true
+            grid:
+                spacing: 20
+                length: 3
+                colour: '#ccc'
+                snap: true
+            zoom:
+                controls: true
+                startScale: 1.0
+                maxScale: 3.0
+                minScale: 0.3
+                scaleSpeed: 1.2
+                wheel: false
+            oneBasedIndex: true
+            scrollbars: true
+        toolbox: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+                <category name="Texte" colour="180">
+              <block type="text_length">
+                <value name="VALUE">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+              <block type="text">
+                <field name="TEXT"></field>
+              </block>
+
+              <block type="text_print">
+                <value name="TEXT">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                </value>
+              </block>
+             </category>
+             <category name="Math" colour="210">
+                 <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+             </category>
+            </xml>
+        workspace: |-
+            <xml xmlns="http://www.w3.org/1999/xhtml">
+              <variables></variables>
+              <block type="text_print">
+                <value name="TEXT">
+                  <shadow type="text">
+                    <field name="TEXT">abc</field>
+                  </shadow>
+                  <block type="text_length">
+                    <value name="VALUE">
+                      <shadow type="text">
+                        <field name="TEXT">abc</field>
+                      </shadow>
+                      <block type="text">
+                        <field name="TEXT">Bonjour !</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </xml>
+stored_submissions: 0
+submission_limit:
+    amount: -1
+    period: -1
+weight: 1.0
