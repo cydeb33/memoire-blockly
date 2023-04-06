@@ -1,24 +1,49 @@
 #!/bin/python3
-#Open source licence goes here
 
-import os
 import subprocess
-import shlex
-from inginious import feedback
+
 from inginious import input
 
+import ingitest
 
-if __name__ == "__main__":
-    input.parse_template("condition.py") #Replace sum.py by your filename on this line and the next
-    p = subprocess.Popen(shlex.split("python3 condition.py"), stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
-    make_output = p.communicate()[0].decode('utf-8')
-    if p.returncode:
-        feedback.set_global_result("failed")
-        feedback.set_global_feedback("Votre code n'a pas pu être exécuté. Vérifiez que tous vos blocs sont correctement connectés.")
-        exit(0)
-    elif make_output == "Bonjour ! contient plus que 6 caractères\n" :
-        feedback.set_global_result("success")
-        feedback.set_global_feedback("Correct ! : " + make_output)
-    else:
-        feedback.set_global_result("failed")
-        feedback.set_global_feedback("Attention au comparateur logique et à la position des blocs " + make_output)
+
+class Test(ingitest.TestCase):
+
+    def __run(self, file: str) -> str:
+        """Run the file and collect the outputs"""
+        with subprocess.Popen(
+            ["python3", file],
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        ) as pipe:
+            stdout, _ = map(
+                lambda b: b.decode(),
+                pipe.communicate(),
+            )
+            rcode = pipe.returncode
+
+        # Check exit code
+        if rcode != 0:
+            self.fail(
+                "Votre code n'a pas pu être exécuté. "
+                "Vérifiez que tous vos blocs sont correctement connectés."
+            )
+        return stdout
+
+    def setUpClass(self):
+        input.parse_template("condition.pytpl")
+
+    def test1(self):
+        output = self.__run("condition.pytpl").strip()
+
+        self.assertEqual(
+            output,
+            "Bonjour ! contient plus que 6 caractères",
+            f"Attention au comparateur logique et à la position des blocs {output}",
+            f"Correct ! : {output}"
+        )
+
+
+if __name__ == '__main__':
+    Test().run().setFeedback()
