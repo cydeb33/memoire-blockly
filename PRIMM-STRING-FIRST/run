@@ -6,10 +6,7 @@ from inginious import input
 
 import ingitest
 
-# Exercice:
-# setvar HAIR
-# HAIR++
-# print(HAIR)
+# Exercice: print(len(TEXT))
 
 
 class Test(ingitest.TestCase):
@@ -22,7 +19,7 @@ class Test(ingitest.TestCase):
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         ) as pipe:
-            stdout, _ = map(
+            stdout, stderr = map(
                 lambda b: b.decode(),
                 pipe.communicate(),
             )
@@ -37,22 +34,19 @@ class Test(ingitest.TestCase):
         return stdout
 
     def setUpClass(self):
-        input.parse_template("student.pytpl")
+        input.parse_template("bloc-substring.pytpl")
 
     def test1(self):
-        output = self.__run("student.pytpl").strip()
+        output = self.__run("bloc-substring.pytpl").strip()
 
         try:
             output_int = int(output)
         except ValueError:
             self.fail(
-                f"Une longeure est un nombre, mais {output} n'en est pas un.")
+                f"Une longueure est un nombre, mais {output} n'en est pas un.")
         else:
-            self.assertEqual(
-                output_int,
-                3,
-                f"Vous n'avez pas donné la bonne solution, la valeur contenue dans la variable nombre_poils est : {output_int}",
-                f"Oui! Le nombre de poils est {output_int}."
+            self.success(
+                f"Bravo! La longeure est de {output_int} charactères."
             )
 
 

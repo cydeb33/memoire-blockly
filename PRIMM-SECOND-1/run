@@ -58,7 +58,7 @@ class Test(ingitest.TestCase):
                         name.strip(),
                         "",
                         "Oups! Vous n'avez pas entré de nom!",
-                        f"Oui! Le prénom numéro {ndx} est {name}"
+                        f"Oui! Le prénom numéro {ndx+1} est {name}"
                     )
 
                 for adx, age in enumerate((age1, age2)):
@@ -66,7 +66,7 @@ class Test(ingitest.TestCase):
                         age,
                         0,
                         f"Oh! Vous êtes très jeune avec {age} ans.",
-                        f"Félicitations! L'age numéro {adx} est {age}."
+                        f"Félicitations! L'age numéro {adx+1} est {age}."
                     )
 
 

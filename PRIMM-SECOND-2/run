@@ -37,10 +37,10 @@ class Test(ingitest.TestCase):
         return stdout
 
     def setUpClass(self):
-        input.parse_template("bloc-substring.pytpl")
+        input.parse_template("student.pytpl")
 
     def test1(self):
-        output = self.__run("bloc-substring.pytpl").strip()
+        output = self.__run("student.pytpl").strip()
 
         try:
             output_int = int(output)
@@ -51,7 +51,7 @@ class Test(ingitest.TestCase):
             self.assertEqual(
                 output_int,
                 4,
-                f"Vous n'avez pas donné la bonne solution, la valeur contenue dans la variable nombre_poils est : {output_int}"
+                f"Vous n'avez pas donné la bonne solution, la valeur contenue dans la variable nombre_poils est : {output_int}",
                 f"Oui! Le nombre de poils est {output_int}."
             )
 

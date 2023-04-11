@@ -19,12 +19,13 @@ class Test(ingitest.TestCase):
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         ) as pipe:
-            stdout, _ = map(
+            stdout, stderr = map(
                 lambda b: b.decode(),
                 pipe.communicate(),
             )
             rcode = pipe.returncode
 
+        print(stderr)
         # Check exit code
         if rcode != 0:
             self.fail(
@@ -37,7 +38,7 @@ class Test(ingitest.TestCase):
         input.parse_template("substring-extract.pytpl")
 
     def test1(self):
-        output = self.__run("substring-extract.tpl").strip()
+        output = self.__run("substring-extract.pytpl").strip()
 
         self.assertEqual(
             output,

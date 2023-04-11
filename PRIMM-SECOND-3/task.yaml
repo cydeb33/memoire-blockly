@@ -42,8 +42,8 @@ problems:
             feedback: Attention au contenu de chaque variable, quelle valeur contiennent-elles
                 ? De combien sont-elles incrémentées ?
         -   text: '42'
-            feedback: Attention au contenu de chaque variable, quelle valeur contiennent-elles
-                ? De combien sont-elles incrémentées ?
+            feedback: Oui, c'est la réponse à la vie, l'univers et tout, mais tente de trouver
+                l'autre réponse ^^
         -   text: '123'
             feedback: Attention au contenu de chaque variable, quelle valeur contiennent-elles
                 ? De combien sont-elles incrémentées ?
