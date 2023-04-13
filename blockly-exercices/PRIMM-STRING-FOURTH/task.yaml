@@ -23,7 +23,7 @@ environment_type: docker
 evaluate: best
 file: ''
 groups: false
-input_random: '0'
+input_random: 0
 name: 'Séquence 2.6 - témoignage de la gardienne - extraction de sous-chaîne  '
 network_grading: false
 problems:

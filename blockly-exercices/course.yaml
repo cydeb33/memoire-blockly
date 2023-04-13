@@ -1,14 +1,15 @@
 accessible: true
 name: Les bio-informaticiens mènent l'enquête ! Blockly - PRIMM
 description: |-
-    Ce cours introduit une série de concepts informatiques au travers d'une petite enquête scientifique. Les outils utilisés sont : Blockly et la méthodologie PRIMM.
-    cyrille.debongnie@student.uclouvain.be
+  Ce cours introduit une série de concepts informatiques au travers d'une petite enquête scientifique. Les outils utilisés sont : Blockly et la méthodologie PRIMM.
+  cyrille.debongnie@student.uclouvain.be
 admins:
-- CyrilleDeb
-- kimmens
-- obonaventure
-- ogoletti
-- CGrancher
+  - CGrancher
+  - CyrilleDeb
+  - kimmens
+  - obonaventure
+  - ogoletti
+  - Drinkable3859
 tutors: []
 groups_student_choice: false
 allow_unregister: true
@@ -18,131 +19,63 @@ registration_password: null
 registration_ac: null
 registration_ac_list: []
 is_lti: false
-lti_url: ''
+lti_url: ""
 lti_keys: {}
 lti_send_back_grade: false
 task_dispenser: toc
 dispenser_data:
--   config:
-        closed: false
-    id: primm
+
+  - config:
+      closed: false
+    id: introduction
     rank: 0
     tasks_list:
-        PRIMM-INTRO-1: 0
-        PRIMM-INTRO-2: 1
-        PRIMM-INTRO-3: 2
-        PRIMM-INTRO-4: 3
+      PRIMM-INTRO-1: 0
+      PRIMM-INTRO-2: 1
+      PRIMM-INTRO-3: 2
+      PRIMM-INTRO-4: 3
     title: PRIMM - première séquence - introduction à Blockly
--   config:
-        closed: false
-    id: primmstring
+
+  - config:
+      closed: false
+    id: strings
     rank: 1
     tasks_list:
-        PRIMM-PREDICT-SUBSTRING: 4
-        PRIMM-STRING-FIFTH: 6
-        PRIMM-STRING-FIRST: 0
-        PRIMM-STRING-FOURTH: 5
-        PRIMM-STRING-SECOND: 2
-        PRIMM-STRING-SEVENTH: 7
-        PRIMM-STRING-THIRD: 3
-        PRIMM-modify-length: 1
-    title: PRIMM- deuxième séquence - chaine de caractère
--   config:
-        closed: false
-    id: primm_second_variable_cycle
+      PRIMM-STRING-FIRST: 0
+      PRIMM-modify-length: 1
+      PRIMM-STRING-SECOND: 2
+      PRIMM-STRING-THIRD: 3
+      PRIMM-PREDICT-SUBSTRING: 4
+      PRIMM-STRING-FOURTH: 5
+      PRIMM-STRING-FIFTH: 6
+      PRIMM-STRING-SEVENTH: 7
+    title: PRIMM - deuxième séquence - chaine de caractère
+
+  - config:
+      closed: false
+    id: variables
     rank: 2
     tasks_list:
-        PRIMM-SECOND-1: 0
-        PRIMM-SECOND-2: 3
-        PRIMM-SECOND-2-BIS: 1
-        PRIMM-SECOND-3: 4
-        PRIMM-SECOND-HELP: 6
-        PRIMM-SECOND-MAKE-STRING: 5
-        PRIMM-SECOND-TYPE: 2
-    title: PRIMM troisième séquence - variables
--   config:
-        closed: false
-    id: primmfourthcond
+      PRIMM-SECOND-1: 0
+      PRIMM-SECOND-2-BIS: 1
+      PRIMM-SECOND-TYPE: 2
+      PRIMM-SECOND-2: 3
+      PRIMM-SECOND-3: 4
+      PRIMM-SECOND-HELP: 6
+      PRIMM-SECOND-MAKE-STRING: 5
+    title: PRIMM - troisième séquence - variables
+
+  - config:
+      closed: false
+    id: conditions
     rank: 3
     tasks_list:
-        PRIMM-COND-1: 0
-        PRIMM-COND-2: 1
-        PRIMM-COND-3: 4
-        PRIMM-COND-4: 5
-        PRIMM-COND-5: 2
-        PRIMM-COND-6: 3
-    title: PRIMM quatrième séquence - conditions
--   config:
-        closed: true
-    id: primm_print_first_cycle
-    rank: 4
-    tasks_list:
-        PRIMM-4-Modify-Make-Drawing: 5
-        Primm-1-1-Intro-concat: 2
-        Primm-1-Print-Name: 1
-        Primm-2-Predict-Concatenation: 3
-        Primm-3-Modify-Make-Concatenation: 4
-        Primm-5-Modify-Make-Concatenation-optimization: 6
-        Primm-Intro-Blocs: 0
-    title: old_version PRIMM PRINT FIRST CYCLE
--   config:
-        closed: true
-    id: dev
-    rank: 5
-    tasks_list:
-        Investigate: 8
-        Investigate2: 9
-        Make1: 11
-        Make2: 12
-        Modify2: 10
-        StringMake: 7
-        StringPredict: 4
-        StringRun: 5
-        StringRun2: 6
-        cyrille_blockly_1: 3
-        cyrille_maze_1: 0
-        cyrille_maze_2: 1
-        cyrille_maze_3: 2
-        tutorial: 13
-    title: old_version - première tentative de séquence
--   config:
-        closed: false
-    id: jobblockly
-    rank: 6
-    tasks_list:
-        4ennemiesTEST: 2
-        FixAttemptXML: 4
-        issueGit: 3
-        pegmanTEST: 1
-        pvzTEST: 0
-    title: jobBlockly
-toc:
--   id: primm_print_first_cycle
-    rank: 0
-    tasks_list:
-        PRIMM-4-Modify-Make-Drawing: 5
-        Primm-1-1-Intro-concat: 2
-        Primm-1-Print-Name: 1
-        Primm-2-Predict-Concatenation: 3
-        Primm-3-Modify-Make-Concatenation: 4
-        Primm-Intro-Blocs: 0
-    title: PRIMM PRINT FIRST CYCLE
--   id: dev
-    rank: 1
-    tasks_list:
-        Investigate: 8
-        Investigate2: 9
-        Make1: 11
-        Make2: 12
-        Modify2: 10
-        StringMake: 7
-        StringPredict: 4
-        StringRun: 5
-        StringRun2: 6
-        TestSumTutorial: 13
-        cyrille_blockly_1: 3
-        cyrille_maze_1: 0
-        cyrille_maze_2: 1
-        cyrille_maze_3: 2
-    title: dev
+      PRIMM-COND-1: 0
+      PRIMM-COND-2: 1
+      PRIMM-COND-5: 2
+      PRIMM-COND-6: 3
+      PRIMM-COND-3: 4
+      PRIMM-COND-4: 5
+    title: PRIMM -  quatrième séquence - conditions
+
 registration_ac_accept: true
